@@ -1,27 +1,43 @@
-# Job Posting API
+# Job Posting API - Spring Boot Application
+
+## Description
+
+This is a **Job Posting API** developed using **Spring Boot**, **Spring Data JPA**, and **MySQL**. The application allows users to manage job posts by performing CRUD (Create, Read, Update, Delete) operations. It is designed to demonstrate how to build a RESTful API and integrate with a MySQL database, along with implementing logging using **AOP** (Aspect-Oriented Programming).
 
 ## Features
 
-- Perform CRUD operations (Create, Read, Update, Delete) on job posts.
-- Input validation and error handling.
-- Logs method execution using AOP (Aspect-Oriented Programming).
-- Tested with **Postman**.
+- **Create Job Post**: Allows users to create new job posts with relevant details.
+- **Retrieve Job Post**: Allows users to fetch details of a specific job post by its ID.
+- **Update Job Post**: Allows users to update existing job post details.
+- **Delete Job Post**: Allows users to delete job posts by ID.
+- **Input Validation**: Validates job post data to ensure integrity.
+- **Error Handling**: Handles errors gracefully and provides meaningful responses to the client.
+- **Logging**: Logs method calls using **AOP** for method entry, exit, exceptions, and return values.
 
 ## Technologies Used
 
-- **Spring Boot**
-- **Spring Data JPA**
-- **MySQL**
-- **AOP (Aspect-Oriented Programming)**
-- **Postman** (for API testing)
+- **Java** (JDK 11+)
+- **Spring Boot** (for building the RESTful API)
+- **Spring Data JPA** (for database interaction)
+- **MySQL** (for data storage)
+- **SLF4J + Logback** (for logging)
+- **Postman** (for testing API endpoints)
+- **Maven** (for project management and dependency management)
 
-## Setup
+## Setup Instructions
 
-1. Clone the repository:
+### Prerequisites
 
-   ```bash
-   git clone https://github.com/yourusername/job-posting-api.git
-   cd job-posting-api
+- **Java 11 or higher**
+- **MySQL** (Ensure you have MySQL installed and running locally or remotely)
+- **Maven** (for building the project)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/job-posting-api.git
+cd job-posting-api
+
 
 **2. Set up MySQL database (`JAVA_JDBC`).**
     
