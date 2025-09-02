@@ -1,0 +1,196 @@
+/* === TIPTAP EDITOR STYLES === */
+.tiptap {
+  margin-top: 0; // Ensures no space between toolbar and editor
+  padding: 1rem;
+  border-top: none;
+  border: 2px solid white; // White border around the editor
+  // border-radius: 6px; // Optional: makes corners slightly rounded
+
+  // Remove top margin from first element
+  :first-child {
+    margin-top: 0;
+  }
+
+  
+  
+
+  /* === Remove browser outline on focus === */
+  &:focus {
+    outline: none !important;
+  }
+
+  &.ProseMirror{
+
+    min-height: 200px;
+    max-height: 100%;
+  }
+
+  &.ProseMirror-focused {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* === List Styles === */
+  ul,
+  ol {
+    padding-left: 1.5rem;
+    margin: 1.25rem 0;
+
+    li p {
+      margin: 0.25em 0;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul,
+  menu {
+    list-style-type: disc;
+  }
+
+  /* === Heading Styles === */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+    margin-top: 2.5rem;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+
+  /* === Inline Code Styles === */
+  code {
+    background-color: var(--purple-light);
+    border-radius: 0.4rem;
+    color: var(--black);
+    font-size: 0.85rem;
+    padding: 0.25em 0.3em;
+  }
+
+  /* === Block Code Styles === */
+  pre {
+    background: var(--black);
+    border-radius: 0.5rem;
+    color: var(--white);
+    font-family: 'JetBrainsMono', monospace;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+
+    code {
+      background: none;
+      color: inherit;
+      font-size: 0.8rem;
+      padding: 0;
+    }
+  }
+
+  /* === Blockquote === */
+  blockquote {
+    border-left: 3px solid var(--gray-3);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  /* === Horizontal Rule === */
+  hr {
+    border: none;
+    border-top: 1px solid var(--gray-2);
+    margin: 2rem 0;
+  }
+
+  /* === Button (if used inside content) === */
+  button {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darkred;
+    }
+
+    .is-active {
+      background-color: #958DF1;
+    }
+
+    
+  }
+}
+
+/* === CONTROLS + TOOLBAR STYLES === */
+// .control-group {
+//   padding: 20px;
+//   border: 2px solid white;
+//   margin-bottom: 0; // Remove space below the toolbar
+
+//   .button-group {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 10px;
+//     margin-bottom: 0;
+
+//     .bg-mine-shaft-900 {
+//       background-color: #1a1a1a;
+//       // border-radius: 4px;
+
+//       padding: 0.5rem;
+//       display: flex;
+//       align-items: center;
+//       cursor: pointer;
+//       transition: background-color 0.3s ease;
+//       border: 1px solid white;
+
+//       svg {
+//         color: #ffffff;
+//         transition: color 0.2s;
+//       }
+
+//       &:hover svg {
+//         color: #958DF1;
+//       }
+
+//       &.is-active {
+//         border-color: #958DF1;
+
+//         svg {
+//           color: #958DF1;
+//         }
+//       }
+//     }
+//   }
+// }
+
+/* Remove right border of active button */
+/* Make sure to apply this inside styles.scss */
+
+
