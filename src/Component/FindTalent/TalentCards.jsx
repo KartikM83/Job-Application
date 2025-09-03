@@ -38,7 +38,7 @@ function TalentCards(props) {
       <div className="flex justify-between ">
         <div className="flex items-center gap-3">
           <div className=" w-20 h-20 p-2 bg-mine-shaft-800 rounded-full">
-            <img className="rounded-full" src={`src/assets/Avatar/${props.image}.png`} alt="" />
+            <img className="rounded-full" src={props.image} alt="" />
           </div>
           <div className="flex flex-col gap-1">
             <div className="font-bold text-lg">{props.name}</div>
