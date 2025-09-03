@@ -2,21 +2,21 @@ import { MantineProvider } from '@mantine/core'; // Import MantineProvider
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import React from 'react'
-import HomePages from './Compoment/Pages/HomePages'
+import HomePages from './Component/Pages/HomePages'
 // import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import FindJobs from './Compoment/Pages/FindJobs'
-import Header from './Compoment/Header/Header'
-import Footer from './Compoment/LandingPage/Footer'
-import FindTalent from './Compoment/Pages/FindTalent'
-import TalentProfilePage from './Compoment/Pages/TalentProfilePage'
-import PostJobPage from './Compoment/Pages/PostJobPage'
-import JobDescPage from './Compoment/Pages/JobsDescPage';
-import ApplyJobPage from './Compoment/Pages/ApplyJobPage';
-import CompanyPage from './Compoment/Pages/CompanyPage';
-import PostedJobPage from './Compoment/Pages/PostedJobPage';
-import JobHistoryPage from './Compoment/Pages/JobHistoryPage';
-import SignupPage from './Compoment/Pages/SignUpPage';
-import ProfilePage from './Compoment/Pages/ProfilePage';
+import FindJobs from './Component/Pages/FindJobs'
+import Header from './Component/Header/Header'
+import Footer from './Component/LandingPage/Footer'
+import FindTalent from './Component/Pages/FindTalent'
+import TalentProfilePage from './Component/Pages/TalentProfilePage'
+import PostJobPage from './Component/Pages/PostJobPage'
+import JobDescPage from './Component/Pages/JobsDescPage';
+import ApplyJobPage from './Component/Pages/ApplyJobPage';
+import CompanyPage from './Component/Pages/CompanyPage';
+import PostedJobPage from './Component/Pages/PostedJobPage';
+import JobHistoryPage from './Component/Pages/JobHistoryPage';
+import SignupPage from './Component/Pages/SignUpPag';
+import ProfilePage from './Component/Pages/ProfilePage';
 
 
 
