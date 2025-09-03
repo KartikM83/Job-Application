@@ -1,7 +1,7 @@
 import { IconFishHook } from "@tabler/icons-react";
 import React from "react";
 import SignUp from "../SignupLogin/SignUp";
-import Login from "../SignupLogin/LogIn";
+import Login from "../SignupLogin/Login";
 import { useLocation } from "react-router-dom";
 function SignupPage() {
 
