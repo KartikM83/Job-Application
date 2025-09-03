@@ -15,7 +15,7 @@ import ApplyJobPage from './Component/Pages/ApplyJobPage';
 import CompanyPage from './Component/Pages/CompanyPage';
 import PostedJobPage from './Component/Pages/PostedJobPage';
 import JobHistoryPage from './Component/Pages/JobHistoryPage';
-import SignupPage from './Component/Pages/SignUpPag';
+import SignupPage from './Component/Pages/SignupPage';
 import ProfilePage from './Component/Pages/ProfilePage';
 
 
