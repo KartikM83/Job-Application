@@ -4,6 +4,28 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import { Link } from "react-router-dom";
 
+// Import images
+import Amazon from "../../assets/Icons/Amazon.png";
+import Apple from "../../assets/Icons/Apple.png";
+import Adobe from "../../assets/Icons/Adobe.png";
+import Google from "../../assets/Icons/Google.png";
+import Meta from "../../assets/Icons/Meta.png";
+import Microsoft from "../../assets/Icons/Microsoft.png";
+import Netflix from "../../assets/Icons/Netflix.png";
+import Spotify from "../../assets/Icons/Spotify.png";
+
+// Map of company logos
+const companyLogos = {
+  Amazon,
+  Apple,
+  Adobe,
+  Google,
+  Meta,
+  Microsoft,
+  Netflix,
+  Spotify,
+};
+
 
 function JobCards(props){
 
@@ -13,7 +35,7 @@ function JobCards(props){
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className=" w-12 h-12 p-2 bg-mine-shaft-800 rounded-xl">
-              <img className="" src={`src/assets/Icons/${props.company}.png`} alt="" />
+              <img className="" src={companyLogos[props.company]} alt="" />
             </div>
 
             <div className="flex flex-col gap-1">
