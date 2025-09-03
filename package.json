@@ -43,7 +43,6 @@
     "dayjs": "^1.11.13",
     "dompurify": "^3.2.5",
     "jodit-react": "^5.2.19",
-    "mui-tiptap": "^1.18.1",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.4",
     "react": "^19.0.0",
