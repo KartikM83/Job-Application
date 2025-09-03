@@ -3,6 +3,7 @@ import { IconArrowLeft, IconHeart, IconMapPin } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { card, desc, skills } from "../Data/JobDescData";
+import googleIcon from '../../assets/Icons/Google.png';
 
 import DOMPurify from 'dompurify'
 
@@ -16,7 +17,7 @@ function JobDesc(props) {
             <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
                     <div className=" w-16 h-16 p-3 bg-mine-shaft-800 rounded-xl">
-                        <img className="" src={`src/assets/Icons/Google.png`} alt="" />
+                        <img className="" src={googleIcon} alt="" />
                     </div>
 
                     <div className="flex flex-col gap-0.5">
@@ -176,7 +177,7 @@ function JobDesc(props) {
                 <div className="flex items-center gap-3">
                     
                     <div className=" w-14 h-14 p-3 bg-mine-shaft-800 rounded-xl">
-                        <img className="" src={`src/assets/Icons/Google.png`} alt="" />
+                        <img className="" src={googleIcon} alt="" />
                     </div>
 
                     <div className="flex flex-col">

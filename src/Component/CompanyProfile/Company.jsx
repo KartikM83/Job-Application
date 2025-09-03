@@ -4,6 +4,9 @@ import React from "react";
 import AboutComp from "./AboutComp";
 import JobComp from "./JobComp";
 import EmployeeComp from "./EmployeeComp";
+import banner from "../../assets/Profile/banner.jpg";
+import googleIcon from "../../assets/Icons/Google.png";
+
 
 function TabPanel({ children, value, index }) {
     return (
@@ -30,12 +33,12 @@ function Company() {
             <div className="relative">
                 <img
                     className="rounded-t-2xl"
-                    src="src/assets/Profile/banner.jpg"
+                    src={banner}
                     alt="banner"
                 />
                 <img
                     className="rounded-3xl p-3 bg-mine-shaft-950 absolute w-40 h-40 -bottom-1/4 left-5 border-8 border-mine-shaft-950"
-                    src="src/assets/Icons/Google.png"
+                    src={googleIcon}
                     alt="profile"
                 />
             </div>

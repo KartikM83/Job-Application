@@ -8,6 +8,9 @@ import { Chip, Fab, TextField } from "@mui/material";
 import SelectInput from "./SelectInput";
 import fields from "../Data/Profile";
 
+import Banner from "../../assets/Profile/banner.jpg";
+import Avatar from "../../assets/Avatar/avatar.png";
+
 function Profile(props) {
   const select = fields;
 
@@ -47,8 +50,8 @@ function Profile(props) {
   return (
     <div className="w-5/6 mx-auto">
       <div className="relative">
-        <img className="rounded-t-2xl" src="src/assets/Profile/banner.jpg" alt="" />
-        <img className="rounded-full absolute w-48 h-48 -bottom-1/3 left-4 border-8 border-mine-shaft-950" src="src/assets/Avatar/avatar.png" alt="" />
+        <img className="rounded-t-2xl" src={Banner} alt="" />
+        <img className="rounded-full absolute w-48 h-48 -bottom-1/3 left-4 border-8 border-mine-shaft-950" src={Avatar} alt="" />
       </div>
 
       <div className="px-5 mt-20">
