@@ -1,5 +1,6 @@
 import React from "react";
 import {
+
   IconMapPin,
   IconCalendarMonth,
   IconBookmark
@@ -11,21 +12,8 @@ import { Modal } from "@mui/material";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import dayjs from "dayjs";
-
-// Static avatar imports
-import avatar0 from '../../assets/Avatar/avatar.png';
-import avatar1 from '../../assets/Avatar/avatar1.png';
-import avatar2 from '../../assets/Avatar/avatar2.png';
-import avatar3 from '../../assets/Avatar/avatar3.png'; // Add more if needed
-
-const avatars = {
-  avatar0,
-  avatar1,
-  avatar2,
-  avatar3
-};
+import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 
 function TalentCards(props) {
   const style = {
@@ -47,19 +35,15 @@ function TalentCards(props) {
 
   return (
     <div className="flex flex-col gap-4 w-[22rem] p-4 rounded-xl bg-mine-shaft-900 hover:shadow-[0_0_5px_1px_yellow] !shadow-bright-sun-400">
-      <div className="flex justify-between">
+      <div className="flex justify-between ">
         <div className="flex items-center gap-3">
-          <div className="w-20 h-20 p-2 bg-mine-shaft-800 rounded-full">
-            <img
-              className="rounded-full"
-              src={avatars[props.image]}
-              alt={props.name}
-            />
+          <div className=" w-20 h-20 p-2 bg-mine-shaft-800 rounded-full">
+            <img className="rounded-full" src={`src/assets/Avatar/${props.image}.png`} alt="" />
           </div>
           <div className="flex flex-col gap-1">
             <div className="font-bold text-lg">{props.name}</div>
             <div className="text-[13px]">
-              <div>{props.role} &#x2022; {props.company}</div>
+              <div> {props.role} &#x2022; {props.company}</div>
             </div>
           </div>
         </div>
@@ -69,7 +53,7 @@ function TalentCards(props) {
         </div>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 ">
         {props.topSkills.map((skill, index) => (
           <div key={index} className="px-2 py-1 bg-mine-shaft-800 text-bright-sun-400 rounded-lg text-xs">
             {skill}
@@ -93,18 +77,20 @@ function TalentCards(props) {
       </div>
 
       <div>
-        <Box sx={{ border: "0.1px solid #4f4f4f", borderRadius: 1 }}>
+        <Box
+          sx={{
+            border: "0.1px solid #4f4f4f",
+            borderRadius: 1,
+          }}
+        >
           <Divider sx={{ borderColor: "#4f4f4f" }} />
         </Box>
       </div>
 
-      {props.invited ? (
-        <div className="flex gap-2 text-mine-shaft-200 text-sm items-center">
-          <IconCalendarMonth stroke={1.5} />
-          Interview: August 27, 2024 10:00 AM
-        </div>
-      ) : (
-        <div className="flex justify-between">
+      
+        {
+
+          props.invited ?<div className="flex gap-2 text-mine-shaft-200 text-sm items-center"><IconCalendarMonth stroke={1.5}/>Interview: August 27, 2024 10:00 AM</div>:    <div className="flex justify-between">
           <div className="text-mine-shaft-300 font-bold">
             &#8377;{props.expectedCtc}
           </div>
@@ -113,75 +99,86 @@ function TalentCards(props) {
             {props.location}
           </div>
         </div>
-      )}
+        }
+    
 
       <div>
-        <Box sx={{ border: "0.1px solid #4f4f4f", borderRadius: 1 }}>
+        <Box
+          sx={{
+            border: "0.1px solid #4f4f4f",
+            borderRadius: 1,
+          }}
+        >
           <Divider sx={{ borderColor: "#4f4f4f" }} />
         </Box>
       </div>
 
       <div className="flex [&>*]:w-1/2 [&>*]:p-1">
-        {!props.invited && (
-          <>
-            <Link to="/talent-profile">
-              <div>
-                <button
-                  className="w-full box-border border-2 border-bright-sun-400 text-bright-sun-400 font-semibold flex justify-center py-1.5 rounded-md"
-                  type="submit"
-                >
-                  Profile
-                </button>
-              </div>
-            </Link>
+      {
 
-            <div>
-              {props.posted ? (
-                <button
-                  onClick={handleOpen}
-                  className="w-full box-border text-bright-sun-400 bg-[rgba(255,215,0,0.1)] font-semibold flex gap-2 justify-center items-center py-2 rounded-md"
-                  type="submit"
-                >
-                  Schedule <IconCalendarMonth />
-                </button>
-              ) : (
-                <button
-                  className="w-full box-border text-bright-sun-400 bg-[rgba(255,215,0,0.1)] font-semibold flex justify-center py-2 rounded-md"
-                  type="submit"
-                >
-                  Message
-                </button>
-              )}
-            </div>
-          </>
-        )}
+        !props.invited &&<>
 
-        {props.invited && (
-          <>
-            <div>
-              <button
-                className="w-full box-border border-2 border-bright-sun-400 text-bright-sun-400 font-semibold flex justify-center py-1.5 rounded-md"
-                type="submit"
-              >
-                Accept
-              </button>
-            </div>
-            <div>
-              <button
-                className="w-full box-border text-bright-sun-400 bg-[rgba(255,215,0,0.1)] font-semibold flex gap-2 justify-center items-center py-2 rounded-md"
-                type="submit"
-              >
-                Reject
-              </button>
-            </div>
-          </>
-        )}
+<Link to="/talent-profile">
+          <div>
+            <button
+              className="w-full box-border border-2 border-bright-sun-400 text-bright-sun-400 font-semibold flex justify-center py-1.5 rounded-md"
+              type="submit"
+            >
+              Profile
+            </button>
+          </div>
+        </Link>
+
+        <div>
+          {props.posted ? (
+            <button
+              onClick={handleOpen}
+              className="w-full box-border text-bright-sun-400 bg-[rgba(255,215,0,0.1)] font-semibold flex gap-2 justify-center items-center py-2 rounded-md"
+              type="submit"
+            >
+              Schedule <IconCalendarMonth />
+            </button>
+          ) : (
+            <button
+              className="w-full box-border text-bright-sun-400 bg-[rgba(255,215,0,0.1)] font-semibold flex justify-center py-2 rounded-md"
+              type="submit"
+            >
+              Message
+            </button>
+          )}
+        </div>
+        
+        </>
+      }
+
+      {
+
+        props.invited && <>
+
+        <div>  <button
+              className="w-full box-border border-2 border-bright-sun-400 text-bright-sun-400 font-semibold flex justify-center py-1.5 rounded-md"
+              type="submit"
+            >
+              Accept
+            </button></div>
+        <div> <button
+              
+              className="w-full box-border text-bright-sun-400 bg-[rgba(255,215,0,0.1)] font-semibold flex gap-2 justify-center items-center py-2 rounded-md"
+              type="submit"
+            >
+              Reject 
+            </button></div>
+        
+        
+        </>
+      }
+        
       </div>
 
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
         <Box sx={style}>
           <div className="flex flex-col gap-3">
-            <div className="font-bold text-lg">Schedule Interview</div>
+            <div>Schedule Interview</div>
 
             <div className="flex flex-col gap-3">
               {/* Date Picker */}
@@ -195,16 +192,20 @@ function TalentCards(props) {
                       textField: {
                         placeholder: 'Select a date',
                         variant: 'outlined',
-                        label: "",
+                        label: "", // Remove label
                         fullWidth: true,
                         InputProps: {
                           sx: {
-                            backgroundColor: '#3d3d3d',
-                            '& .MuiSvgIcon-root': { color: '#ffbd20' }
+                            backgroundColor: '#3d3d3d', // Red background color
+                            '& .MuiSvgIcon-root':{
+                              color:'#ffbd20'
+                            }
+                            
                           },
                         },
                       },
                     }}
+                   
                   />
                 </LocalizationProvider>
               </div>
@@ -220,16 +221,20 @@ function TalentCards(props) {
                       textField: {
                         placeholder: "Choose time",
                         variant: 'outlined',
-                        label: "",
+                        label: "", // Remove label
                         fullWidth: true,
                         InputProps: {
                           sx: {
-                            backgroundColor: '#3d3d3d',
-                            '& .MuiSvgIcon-root': { color: '#ffbd20' }
+                            backgroundColor: '#3d3d3d', 
+                            '& .MuiSvgIcon-root':{
+                              color:'#ffbd20'
+                            }
+                            
                           },
                         },
                       },
                     }}
+                    
                   />
                 </LocalizationProvider>
               </div>
