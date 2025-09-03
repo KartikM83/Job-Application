@@ -73,4 +73,4 @@ function Talents(){
 //     </div>
 //   );
 // }
-// export default Talents;
+export default Talents;

@@ -3,12 +3,13 @@ import './styles.scss';
 
 import React from 'react';
 import { Color } from '@tiptap/extension-color';
-import ListItem from '@tiptap/extension-list-item';
-import TextStyle from '@tiptap/extension-text-style';
+import ListItem from '@tiptap/extension-list-item'; // default export, OK
+import { TextStyle } from '@tiptap/extension-text-style';
 import { EditorProvider, useCurrentEditor } from '@tiptap/react';
-import StarterKit from '@tiptap/starter-kit';
-import TextAlign from '@tiptap/extension-text-align';
-import Underline from '@tiptap/extension-underline';
+import StarterKit from '@tiptap/starter-kit'; // default export, OK
+import { TextAlign } from '@tiptap/extension-text-align';
+import { Underline } from '@tiptap/extension-underline';
+
 
 import {
   IconBold,
