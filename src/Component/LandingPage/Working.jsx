@@ -4,16 +4,7 @@ import { work } from '../Data/Data';
 // Import images
 import Girl from '../../assets/Working/Girl.png';
 import AvatarImg from '../../assets/Avatar/avatar.png';
-import ApplyJob from '../../assets/Working/Apply for job.png';
-import BuildResume from '../../assets/Working/Build your resume.png';
-import GetHired from '../../assets/Working/Get hired.png';
 
-// Map work names to images (if needed)
-const workImages = {
-  'Apply for job': ApplyJob,
-  'Build your resume': BuildResume,
-  'Get hired': GetHired,
-};
 
 function Working() {
   return (
@@ -49,7 +40,7 @@ function Working() {
               <div className="w-20 h-20 rounded-full bg-bright-sun-300 p-3">
                 <img
                   className="w-full h-full object-cover"
-                  src={workImages[works.name]}
+                  src={works.img}
                   alt={works.name}
                 />
               </div>
